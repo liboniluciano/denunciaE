@@ -2,7 +2,9 @@
   "BACK_BUTTON_TEXT": "Voltar",
 
   "NAME": "Nome",
+  "CPF": "CPF",
   "EMAIL": "Email",
+  "PHONE": "Celular",
   "USERNAME": "Nome de Usuário",
   "PASSWORD": "Senha",
   "LOGIN": "Entrar",
