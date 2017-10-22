@@ -54,14 +54,24 @@ export class User {
    * the user entered on the form.
    */
   signup(accountInfo: any) {
-    let seq = this.api.get('addUser', accountInfo).share();
+    let seq = this.api.post('addUser', accountInfo).share();
 
     seq.subscribe((res: any) => {
-      console.log(res);
       // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
-        this._loggedIn(res);
-      }
+      this._loggedIn(res[0]);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  addSolicitation(solicitationInfo: any) {
+    console.log(solicitationInfo);
+    let seq = this.api.post('addSolicitation', solicitationInfo).share();
+
+    seq.subscribe((res: any) => {
+      // Ok
     }, err => {
       console.error('ERROR', err);
     });
@@ -80,6 +90,6 @@ export class User {
    * Process a login/signup response to store user data
    */
   _loggedIn(resp) {
-    this._user = resp.user;
+    this._user = resp;
   }
 }

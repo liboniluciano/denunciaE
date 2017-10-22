@@ -38,12 +38,16 @@ export class SignupPage {
 
   doSignup() {
     // Attempt to login in through our User service
-    /*this.user.signup(this.account).subscribe((resp) => {
-      console.log(resp);*/
+    this.user.signup(this.account).subscribe((resp) => {
       this.navCtrl.push(MainPage);
-    /*}, (err) => {
-
-      this.navCtrl.push(MainPage);
+      // Unable to sign up
+      let toast = this.toastCtrl.create({
+        message: 'Seja bem-vindo!',
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.present();
+    }, (err) => {
 
       // Unable to sign up
       let toast = this.toastCtrl.create({
@@ -52,6 +56,6 @@ export class SignupPage {
         position: 'top'
       });
       toast.present();
-    });*/
+    });
   }
 }

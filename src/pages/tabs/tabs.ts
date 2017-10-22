@@ -17,6 +17,5 @@ export class TabsPage {
   tab3Root: any = Tab3Root;
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {
-    this.tab = this.navCtrl.parent;
   }
 }

@@ -2,11 +2,5 @@
   "name": "denunciae",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {},
-  "proxies": [
-    {
-      "path": "/api",
-      "proxyUrl": "localhost:8000"
-    }
-  ]
+  "integrations": {}
 }

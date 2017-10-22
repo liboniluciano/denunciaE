@@ -5,7 +5,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 
 import { Settings } from '../../providers/providers';
 import { WelcomePage } from '../../pages/welcome/welcome';
-import { AboutPage } from '../../pages/about/about';
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -118,9 +117,5 @@ export class SettingsPage {
     });
 
     logOutAlert.present();
-  }
-
-  openAbout() {
-    this.navCtrl.push('AbouPage');
   }
 }
