@@ -27,12 +27,19 @@ export class Api {
         reqOpts.params.set(k, params[k]);
       }
     }
+    console.log(params);
+    if(params){
+      encodedUri = prepareParams(params);
+      console.log(JSON.stringify(params));
+      return this.http.get(this.url + '/' + endpoint + '?' + encodeURIComponent(JSON.stringify(params)), reqOpts);
+    } else {
+      return this.http.get(this.url + '/' + endpoint, reqOpts);
+    }
 
-    return this.http.get(this.url + '/' + endpoint, reqOpts);
   }
 
   post(endpoint: string, body: any, reqOpts?: any) {
-    return this.http.post(this.url + '/' + endpoint, body);
+    return this.http.post(this.url + '/' + endpoint, body, reqOpts);
   }
 
   put(endpoint: string, body: any, reqOpts?: any) {

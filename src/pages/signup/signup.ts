@@ -37,11 +37,11 @@ export class SignupPage {
   }
 
   doSignup() {
-    console.log(this.account);
     // Attempt to login in through our User service
-    this.user.signup(this.account).subscribe((resp) => {
+    /*this.user.signup(this.account).subscribe((resp) => {
+      console.log(resp);*/
       this.navCtrl.push(MainPage);
-    }, (err) => {
+    /*}, (err) => {
 
       this.navCtrl.push(MainPage);
 
@@ -52,6 +52,6 @@ export class SignupPage {
         position: 'top'
       });
       toast.present();
-    });
+    });*/
   }
 }

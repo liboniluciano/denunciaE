@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { Settings } from '../../providers/providers';
+import { WelcomePage } from '../../pages/welcome/welcome';
+import { AboutPage } from '../../pages/about/about';
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -38,7 +40,8 @@ export class SettingsPage {
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
-    public translate: TranslateService) {
+    public translate: TranslateService,
+    public alertCtrl: AlertController) {
   }
 
   _buildForm() {
@@ -91,5 +94,33 @@ export class SettingsPage {
 
   ngOnChanges() {
     console.log('Ng All Changes');
+  }
+
+  logOut(){
+    let logOutAlert = this.alertCtrl.create({
+        title: 'Desconectar',
+        message: 'Deseja realmente se desconectar?',
+        buttons: [
+          {
+            text: 'Cancelar',
+            role: 'cancel',
+            handler: () => {
+
+              }
+            },
+            {
+              text: 'Desconectar',
+              handler: () => {
+                this.navCtrl.push(WelcomePage);
+              }
+            }
+        ]
+    });
+
+    logOutAlert.present();
+  }
+
+  openAbout() {
+    this.navCtrl.push('AbouPage');
   }
 }

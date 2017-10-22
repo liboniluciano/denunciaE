@@ -1,7 +1,12 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ pageTitle }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -41,5 +46,7 @@
       </ion-item>
     </ion-list>
   </form>
+
+  <button ion-button (click)="openAbout()">Button</button>
 
 </ion-content>

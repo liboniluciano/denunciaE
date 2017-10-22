@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
@@ -14,7 +14,7 @@
 
 <ion-content>
 
-  <ion-list>
+  <!-- <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
@@ -31,5 +31,32 @@
         </button>
       </ion-item-options>
     </ion-item-sliding>
-  </ion-list>
+  </ion-list> -->
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/img/speakers/bear.jpg">
+    </ion-avatar>
+    <h2>Italo Ferreira</h2>
+    <p>21/10/2017 20:27</p>
+  </ion-item>
+  <img src="assets/img/eeca-pichado-2.jpg">
+  <ion-card-content>
+    <p>Muro pixado <br/> Rua Dr. Washington Luiz</p>
+  </ion-card-content>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
