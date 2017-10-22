@@ -3,6 +3,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers/providers';
+import { User } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -11,15 +12,18 @@ import { Items } from '../../providers/providers';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  currentSolicitations: any;
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, public user: User) {
     this.currentItems = this.items.query();
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
-  ionViewDidLoad() {
+  ionViewWillEnter() {
+    this.currentSolicitations = this.user.getSolicitation();
+    console.log(this.currentSolicitations);
   }
 
   /**

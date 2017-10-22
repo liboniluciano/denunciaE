@@ -42,7 +42,7 @@ export class SignupPage {
       this.navCtrl.push(MainPage);
       // Unable to sign up
       let toast = this.toastCtrl.create({
-        message: 'Seja bem-vindo!',
+        message: this.account.name + ', seja bem-vindo!',
         duration: 3000,
         position: 'bottom'
       });

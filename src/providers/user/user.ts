@@ -79,6 +79,20 @@ export class User {
     return seq;
   }
 
+  getSolicitation() {
+    let seq = this.api.get('solicitation').share();
+    console.log(seq);
+    seq
+    .map(res => res.json())
+    .subscribe(res => {
+      return res;
+    }, err => {
+      //Tratando na login.ts
+    });
+
+    return seq;
+  }
+
   /**
    * Log the user out, which forgets the session
    */
