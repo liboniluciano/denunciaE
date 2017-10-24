@@ -40,7 +40,7 @@ export class LoginPage {
       this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({
-        message: this.loginErrorString,
+        message: 'Seja bem-vindo!',
         duration: 3000,
         position: 'top'
       });

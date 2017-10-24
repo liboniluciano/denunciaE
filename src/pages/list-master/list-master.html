@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <ion-title>Solicitações</ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="addItem()">
@@ -13,25 +13,6 @@
 </ion-header>
 
 <ion-content>
-
-  <!-- <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
-        <ion-avatar item-start>
-          <img [src]="item.profilePic" />
-        </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-      </button>
-
-      <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
-          {{ 'DELETE_BUTTON' | translate }}
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list> -->
   <ion-item>
     <ion-avatar item-start>
       <img src="assets/img/speakers/bear.jpg">
@@ -53,8 +34,64 @@
       </ion-col>
       <ion-col>
         <button color="danger" ion-button icon-left clear small>
+          <ion-icon name="thumbs-down"></ion-icon>
+          <div>3 Dislikes</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/img/speakers/bear.jpg">
+    </ion-avatar>
+    <h2>Italo Ferreira</h2>
+    <p>21/10/2017 23:15</p>
+  </ion-item>
+  <img src="assets/img/buraco.jpg">
+  <ion-card-content>
+    <p>Rua esburacada <br/> Av. Brasil</p>
+  </ion-card-content>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <button color="secondary" ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+          <div>9 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button color="danger" ion-button icon-left clear small>
+          <ion-icon name="thumbs-down"></ion-icon>
+          <div>2 Dislikes</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/img/speakers/bear.jpg">
+    </ion-avatar>
+    <h2>Italo Ferreira</h2>
+    <p>21/10/2017 23:59</p>
+  </ion-item>
+  <img src="assets/img/terreno.jpg">
+  <ion-card-content>
+    <p>Terreno com entulho<br/> Rua das Dores</p>
+  </ion-card-content>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <button color="secondary" ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>9 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button color="danger" ion-button icon-left clear small>
+          <ion-icon name="thumbs-down"></ion-icon>
+          <div>2 Disikes</div>
         </button>
       </ion-col>
     </ion-row>

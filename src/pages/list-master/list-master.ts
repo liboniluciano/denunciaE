@@ -18,13 +18,6 @@ export class ListMasterPage {
     this.currentItems = this.items.query();
   }
 
-  /**
-   * The view loaded, let's query our items for the list
-   */
-  ionViewWillEnter() {
-    this.currentSolicitations = this.user.getSolicitation();
-    console.log(this.currentSolicitations);
-  }
 
   /**
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
